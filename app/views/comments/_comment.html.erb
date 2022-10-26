@@ -1,0 +1,20 @@
+  
+  <%= comment.content %><br />
+  <%= comment.rating %>
+  <div id="rateYo_<%= comment.id%>"> </div><br>
+  </div>
+ 
+ 
+ 
+   <script>
+   
+   $(function () {
+ 
+  $("#rateYo_<%= comment.id %>").rateYo({
+  "rating": `<%= comment.rating.present? ? comment.rating : 0 %>`,
+  readOnly: true
+  });
+});
+
+
+</script> 

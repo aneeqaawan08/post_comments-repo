@@ -1,0 +1,14 @@
+<h2>show  user</h2>
+
+<p> title: <%= @user.name %> </p>
+<p> phone_no: <%= @user.phone_no %> </p>
+<p> email: <%= @user.email %> </p>
+<p> password: <%= @user.password %> </p>
+<p> password_confirmation: <%= @user.password_confirmation %> </p>
+<p> status: <%= @user.status %> </p>
+
+<p> image: <%= image_tag @user.image, width:"200px" %></p>
+
+ 
+<%= link_to "Back",  :back %>
+  

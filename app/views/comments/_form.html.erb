@@ -1,0 +1,43 @@
+  
+  <%= form_for @comment, url: post_comments_path(@post), remote: true do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %><br><br>
+  <%= f.hidden_field :rating, :value => '', :id => 'rating'%>
+
+   <div id="RateYo"> </div><br>
+   
+  <button id= 'my_rating' class='btn btn-primary' value = 'rating' > Submit </button>
+  <%end%>
+
+     <script>
+   val = 0;
+   
+   $(function () {
+ 
+  $("#RateYo").rateYo({
+ 
+    onSet: function (rating, rateYoInstance) {
+
+      val = rating;
+    //   alert("Rating is set to: " + rating);
+    }
+  });
+});
+   
+
+   
+ $(document).ready(function () {
+ $('#my_rating').on('click',function(){ 
+//  document.getElementById('my_rating').value=val;
+    $('#rating').val(val);
+             e.preventDefault();
+             $.ajax({
+             url: `/posts/<%=@post.id%>/comments`,
+             data: $("form").serialize(),
+             type: 'POST',
+             dataType: 'script'
+    });
+  }); 
+ });
+
+</script>  

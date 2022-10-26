@@ -1,0 +1,25 @@
+<h2> create Post </h2>
+
+<%= form_for @post do |f| %> 
+
+    <div class= "mb-3">
+      <div class="form-label"><%= f.label :title %></div>
+      <%= f.text_field :title, autofocus: true, autocomplete: "Title" %>
+    </div>
+  
+    <div class= "mb-3">
+      <div class="form-label"><%= f.label :content %></div>
+      <%= f.text_area :content, autocomplete: "content" %>
+    </div>
+
+    <div class= "mb-3">
+    <div class="form-label"><%= f.label :image %></div>
+    <%= f.file_field :image, autocomplete: "image" %>
+    </div>
+ <br>
+     <div class="actions">
+     <%= f.submit "submit" %>
+     </div>
+     <% end %>
+
+
