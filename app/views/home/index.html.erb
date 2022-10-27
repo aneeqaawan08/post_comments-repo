@@ -14,6 +14,7 @@
       <th>status</th>
       <th>request </th>
        <th colspan="3"></th>
+       
     </tr>
  </thead>
 
@@ -27,8 +28,9 @@
                 <div class="card" >
                   <img class="card-img-top" alt=""> <%= image_tag (post.image), style:"width:415px" if post.image.attached?%>
                   <div class = "card-body">
-                   <h3 class="card-title"><%= post.title %></h3>
-                   <h5 class="card-text"><%= post.content %></h5>
+                   <h3 class="card-title"><b><%= post.title %></b></h3>
+                   <h5>by: <%= post.user.name unless post.user.blank? %></h5>
+                   <h6 class="card-text"><%= post.content %></h6>
                    <a herf="#" class="card-link" ><%= link_to 'Show', post %></a>
                   </div>
                  
