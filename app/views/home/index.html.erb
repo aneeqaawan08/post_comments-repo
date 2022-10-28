@@ -23,6 +23,7 @@
      <div>
        <div class="container">
          <div class="row">
+         
            <% @posts.each do |post| %>
              <div class="col-md-4">
                 <div class="card" >
@@ -33,10 +34,11 @@
                    <h6 class="card-text"><%= post.content %></h6>
                    <a herf="#" class="card-link" ><%= link_to 'Show', post %></a>
                   </div>
-                 
                 </div>
              </div>
            <% end %>
+          
+           </div>
          </div>
        </div> 
      </div>
