@@ -22,7 +22,7 @@
      <div>
        <div class="container">
          <div class="row">
-           <% posts.each do |post| %>
+           <% @posts.each do |post| %>
              <div class="col-md-4">
                 <div class="card" >
                   <img class="card-img-top" alt=""> <%= image_tag (post.image), style:"width:415px" if post.image.attached?%>
