@@ -30,7 +30,7 @@
  $('#my_rating').on('click',function(){ 
 //  document.getElementById('my_rating').value=val;
     $('#rating').val(val);
-             e.preventDefault();
+            //  e.preventDefault();
              $.ajax({
              url: `/posts/<%=@post.id%>/comments`,
              data: $("form").serialize(),
