@@ -5,8 +5,8 @@
 <p> content: <%= @post.content %> </p>
 
 <p> image: <%= image_tag @post.image, width:"200px" %></p>
+ <h4> Comments:</h4>
   <div id= "comment_pane">
-  <h4> Comments:</h4>
   <% @post.comments.each do |comment|%>
      <%= render 'comments/comment', comment: comment%>
      <%end%>

@@ -27,10 +27,10 @@
 
    
  $(document).ready(function () {
- $('#my_rating').on('click',function(){ 
+ $('#my_rating').on('click',function(event){ 
 //  document.getElementById('my_rating').value=val;
     $('#rating').val(val);
-            //  e.preventDefault();
+             event.preventDefault();
              $.ajax({
              url: `/posts/<%=@post.id%>/comments`,
              data: $("form").serialize(),

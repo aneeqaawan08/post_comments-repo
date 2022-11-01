@@ -1,2 +1,1 @@
-$("#comment_pane").html("<%= j render 'comment' %>")
-
+$("#comment_pane").append("<%= j render 'comment', comment: @comment %>")
