@@ -29,7 +29,10 @@
                   <div class = "card-body">
                    <h3 class="card-title"><%= post.title %></h3>
                    <h5 class="card-text"><%= post.content %></h5>
-                   <a herf="#" class="card-link" ><%= link_to 'Show', post %></a>
+                   
+                   <a herf="posts/<%= post.id%>" class="card-link" ><%= link_to 'Show', post %></a>
+                 
+                   
                   </div>
                  
                 </div>

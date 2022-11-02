@@ -18,8 +18,15 @@
 
 <br>
 <%= link_to 'Back', posts_path %> <br>
+<% if user_signed_in?%>
+<% if can? :update, @post %>
 <%= link_to 'Edit existing post', edit_post_path %><br>
+<%end%>
+<% if can? :destroy, @post %>
 <%= link_to 'delete post', post_path, method: :delete %><br>
+<%end%>
+<% if can? :new, @post %>
 <%= link_to 'new post', new_post_path %><br> 
-
+<%end%>
+<%end%>
  

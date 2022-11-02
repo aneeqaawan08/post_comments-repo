@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-before_action :authenticate_user!
+
+# before_action :authenticate_user!
+
 def new
     @post = Post.new
 end
@@ -14,12 +16,14 @@ def create
     else
         render new
     end
+   
 
 end
 
 def show
     @post = Post.find(params[:id]) 
     @comment = Comment.new
+   
 
 end
 

@@ -33,6 +33,8 @@ gem 'rateyo-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap'
 
+gem "cancan"
+
 
 
 group :development, :test do
