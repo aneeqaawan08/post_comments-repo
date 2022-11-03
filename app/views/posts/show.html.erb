@@ -5,6 +5,7 @@
 <p> content: <%= @post.content %> </p>
 
 <p> image: <%= image_tag @post.image, width:"200px" %></p>
+<% if user_signed_in?%>
  <h4> Comments:</h4>
   <div id= "comment_pane">
   <% @post.comments.each do |comment|%>
@@ -15,7 +16,7 @@
   <h2> Add A comment:</h2>
    <%= render 'comments/form' %>
   </div>
-
+ <%end%>
 <br>
 <%= link_to 'Back', posts_path %> <br>
 <% if user_signed_in?%>

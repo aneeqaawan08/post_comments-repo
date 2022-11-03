@@ -75,7 +75,7 @@ def approve
 private
 
 def post_params
-    params.require(:post).permit [:title,:content,:image, :user_id, :status]
+    params.require(:post).permit [:title,:content,:image, :user_id, :status, :name]
 end
 
 

@@ -2,11 +2,18 @@
   "name": "post_comments",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
-    "turbolinks": "^5.2.0"
+    "actioncable": "^5.2.8-1",
+    "activestorage": "^5.2.8-1",
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "turbolinks": "^5.2.0",
+    "ujs": "^0.34.1",
+    "webpacker": "^4.6.0"
   },
     "engines": {
     "node": "14.x"

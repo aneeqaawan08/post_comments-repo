@@ -31,7 +31,7 @@ gem 'rateyo-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'bootstrap'
+gem 'bootstrap', '~>5.2.1'
 
 gem "cancan"
 

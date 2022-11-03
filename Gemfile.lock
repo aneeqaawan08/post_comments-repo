@@ -239,7 +239,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
-  bootstrap
+  bootstrap (~> 5.2.1)
   byebug
   cancan
   capybara (>= 2.15)
