@@ -22,7 +22,9 @@
         <td><%= post.comments.count%></td>
       
         <td><%= link_to 'Show', post %> </td>
+        <% if can? :update, @article %>
         <td><%= link_to 'Edit', edit_post_path(post)%></td>
+        <%end%>
         <td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
       </tr>
     <% end %>

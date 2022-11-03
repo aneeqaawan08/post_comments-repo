@@ -15,5 +15,8 @@
     "ujs": "^0.34.1",
     "webpacker": "^4.6.0"
   },
+    "engines": {
+    "node": "14.x"
+  },
   "version": "0.1.0"
 }

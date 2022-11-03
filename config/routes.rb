@@ -9,13 +9,13 @@ Rails.application.routes.draw do
      get 'users/inactive', to: 'users#inactive'
     #  get 'approve', to: 'users#approve'
    root 'home#index'
-
+  
    resources :users, only: [:show, :index] do
     member do
       get :approve
     end
   end
-        
+     
    resources :posts do
     member do
       get :approve
