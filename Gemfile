@@ -35,6 +35,9 @@ gem 'bootstrap', '~>5.2.1'
 
 gem "cancan"
 
+gem "dotenv-rails"
+gem "cloudinary"
+
 
 
 group :development, :test do

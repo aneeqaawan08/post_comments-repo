@@ -46,4 +46,9 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
+
+
+  export CLOUD_NAME=yourcloudname
+  export API_KEY=yourcloudname
+  export API_SECRET=yourcloudname
 end

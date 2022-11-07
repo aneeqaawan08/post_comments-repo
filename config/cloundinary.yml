@@ -1,0 +1,11 @@
+development:
+  cloud_name: <%= ENV['dqkqb0ezf'] %>
+  api_key: <%= ENV['248989752439865'] %>
+  api_secret: <%= ENV['G6RfkdA98nhYb7BhKeQclwu00TA'] %>
+
+production:
+  cloud_name: <%= ENV['dqkqb0ezf'] %>
+  api_key: <%= ENV['248989752439865'] %>
+  api_secret: <%= ENV['G6RfkdA98nhYb7BhKeQclwu00TA'] %>
+  secure: true
+  cdn_domain: true
