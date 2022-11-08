@@ -1,50 +1,39 @@
 <p id="notice"><%= notice %></p>
-
- <div class="d-flex justify-content-center" > <h1> All posts</h1></div>
-
+<div class="d-flex justify-content-center" > <h1> All posts</h1></div>
 <%# <%= link_to 'New post', new_post_path, method: :get %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th>Comments_count</th>
-      <th>status</th>
-      <th>request </th>
-       <th colspan="3"></th>
-       
-    </tr>
- </thead>
-
- <tbody>
-   <tr>
-     <div>
-       <div class="container">
-         <div class="row">
-         
-           <% @posts.each do |post| %>
-             <div class="col-md-4">
-                <div class="card" >
-                  <img class="card-img-top" alt=""> <%= image_tag (post.image), style:"width:415px" if post.image.attached?%>
-                  <div class = "card-body">
-                   <h3 class="card-title"><b><%= post.title %></b></h3>
-                   <h5>by: <%= post.user.name unless post.user.blank? %></h5>
-                   <h6 class="card-text"><%= post.content %></h6>
-                   <a herf="#" class="card-link" ><%= link_to 'Show', post %></a>
+  <table>
+    <thead>
+      <tr>
+      
+         <th colspan="3"></th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <div>
+          <div class="container">
+            <div class="row">
+              <% @posts.each do |post| %>
+                <div class="col-md-4">
+                  <div class="card" >
+                    <%= cl_image_tag(post.image.key, width: 355, height: 300, crop: :scale, effect: "cartoonify" )if post.image.attached? %>
+                    <%# <img class="card-img-top" alt=""> <%= image_tag (post.image), style:"width:355px" if post.image.attached?%>
+                    <div class = "card-body">
+                      <h3 class="card-title"><b><%= post.title %></b></h3>
+                      <h5>by: <%= post.user.name unless post.user.blank? %></h5>
+                      <h6 class="card-text"><%= post.content %></h6>
+                      <a herf="#" class="card-link" ><%= link_to 'Show', post %></a>
+                    </div>
                   </div>
                 </div>
-             </div>
-           <% end %>
-          
-           </div>
-         </div>
-       </div> 
-     </div>
-    </tr>
- </tbody>
-  
+              <% end %>          
+            </div>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </div>  
 </table>
 
 

@@ -14,7 +14,7 @@
 
     <div class= "mb-3">
     <div class="form-label"><%= f.label :image %></div>
-    <%= f.file_field :image, as: :file autocomplete: "image" %>
+    <%= f.file_field :image, direct_upload: true, autocomplete: "image" %>
     </div>
  <br>
      <div class="actions">

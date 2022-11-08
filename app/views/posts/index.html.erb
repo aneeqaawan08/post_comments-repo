@@ -2,6 +2,7 @@
 
 <%# <%= link_to 'New post', new_post_path, method: :get %>
 
+
 <table class="table table-dark table-striped">
   <thead>
     <tr>
@@ -18,15 +19,18 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
-        <td> <%= image_tag (post.image),style:"width:50px" if post.image.attached?%></td>
+        <td><%= cl_image_tag(post.image.key, width: 200, height: 100, crop: :scale, effect: "cartoonify") if post.image.attached?%> </td>
+        <%# <td> <%= image_tag (post.image),style:"width:50px" if post.image.attached?%></td>
         <td><%= post.comments.count%></td>
       
         <td><%= link_to 'Show', post %> </td>
-        <% if can? :update, @article %>
+        
         <td><%= link_to 'Edit', edit_post_path(post)%></td>
-        <%end%>
+      
         <td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>  
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>

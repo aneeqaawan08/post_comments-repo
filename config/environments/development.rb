@@ -62,6 +62,6 @@ Rails.application.configure do
 
   # Tell ActiveStorage which service to use for image uploads 
 
+  # Use Cloudinary.
   config.active_storage.service = :cloudinary
-
 end

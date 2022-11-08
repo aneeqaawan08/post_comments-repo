@@ -7,10 +7,10 @@ def new
 end
 
 def create
-    
     @post = Post.new(post_params)
+   
     @post.user_id = current_user.id
-    if @post.save!
+    if @post.save
         flash[notice]= 'post successfully created'
         redirect_to post_path(@post)
     else
@@ -75,7 +75,7 @@ def approve
 private
 
 def post_params
-    params.require(:post).permit [:title,:content,:image, :user_id, :status, :name]
+    params.require(:post).permit [:title,:content, :user_id, :image, :status, :name]
 end
 
 
