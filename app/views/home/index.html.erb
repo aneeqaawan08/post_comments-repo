@@ -17,7 +17,7 @@
               <% @posts.each do |post| %>
                 <div class="col-md-4">
                   <div class="card" >
-                    <%= cl_image_tag(post.image.key, width: 355, height: 300, crop: :scale, effect: "cartoonify" )if post.image.attached? %>
+                    <%= cl_image_tag(post.image.key, crop: :scale, effect: "cartoonify" )if post.image.attached? %>
                     <%# <img class="card-img-top" alt=""> <%= image_tag (post.image), style:"width:355px" if post.image.attached?%>
                     <div class = "card-body">
                       <h3 class="card-title"><b><%= post.title %></b></h3>
