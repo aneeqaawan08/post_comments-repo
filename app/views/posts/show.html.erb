@@ -3,7 +3,7 @@
 
 <p> title: <%= @post.title %> </p>
 <p> content: <%= @post.content %> </p>
-<% debugger %>
+
 <p>image:<%= cl_image_tag(@post.image.key,width: 200, height: 100, crop: :scale, effect: "cartoonify") if @post.image.attached? %></p>
 <%# <p> image: <%= image_tag @post.image,  width:"200px" if @post.image.attached? %></p>
 <% if user_signed_in?%>
