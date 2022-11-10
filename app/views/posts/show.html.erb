@@ -19,7 +19,12 @@
   </div>
  <%end%>
 <br>
-<%= link_to 'Back', posts_path %> <br>
+<% if user_signed_in?%>
+<%= link_to 'Back', posts_path %> 
+<% else %>
+<%= link_to 'Back', root_path %> 
+<%end%>
+<br>
 <% if user_signed_in?%>
 <% if can? :update, @post %>
 <%= link_to 'Edit existing post', edit_post_path %><br>

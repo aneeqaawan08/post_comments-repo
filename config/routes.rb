@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
   end
      
-   resources :posts do
+   resources :posts and resource :post do
     member do
       get :approve
     end

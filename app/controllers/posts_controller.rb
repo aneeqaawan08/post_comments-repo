@@ -32,6 +32,7 @@ def index
     # @posts = Post.all
     # @count_of_posts = @posts.count
     # @comments = comment.all
+    if current_user
     if current_user.admin?
         @posts = Post.all
         
@@ -39,6 +40,7 @@ def index
         @posts = current_user.posts.all
         
     end
+end
 end
 
 def edit
