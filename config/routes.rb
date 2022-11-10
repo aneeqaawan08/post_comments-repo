@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     #  get 'approve', to: 'users#approve'
    root 'home#index'
   
-   resources :users, only: [:show, :index] do
+   resources :users, only: [:show, :index,:edit,:update] do
     member do
       get :approve
     end

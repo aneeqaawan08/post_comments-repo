@@ -33,7 +33,7 @@ gem 'rateyo-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~>5.2.1'
 
-gem "cancan"
+gem 'cancancan'
 
 gem "dotenv-rails"
 gem "cloudinary"

@@ -1,26 +1,39 @@
 class UsersController < ApplicationController
     
-
+   load_and_authorize_resource
     def show
         @user = current_user
-        #  @user = User.find(params[:id])
-      
+            # @user = User.find(params[:id])
     end
+
+    def edit
+        @user = User.find(params[:id])
+    end 
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(user_params)
+            flash[:notice] = 'User successfully updated'
+            redirect_to user_path(@user)
+        else
+            render 'new'
+        end
+      end
      
     def index
          @users = User.all
-        
     end
 
     def active
         # @users = User.find(:all, :condition => ["status = ?", "active"])
          @users= User.where(status: "active")
         # @users = User.all.where(:status => 'active')
-
+        
     end
 
     def inactive
         @users= User.where(status: "inactive")
+        
     end
 
     def approve
@@ -28,6 +41,7 @@ class UsersController < ApplicationController
        @user= User.find(params[:id])
           @user.update(status: "active")
           redirect_to users_path
+       
     end
         
         
