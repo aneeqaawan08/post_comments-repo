@@ -18,7 +18,7 @@
       if @user.password == @user.password_confirmation    
               if @user.save 
               flash[:notice] = 'User is created successfully'
-              redirect_to users_root_path
+              redirect_to root_path
               else
               render 'new'
               end
